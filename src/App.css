@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;1,400&display=swap');
+/* font-family: "Kanit", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+/* font-family: 'Genos', sans-serif; */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --secondaryColor: #4f7e52;
+  --secondaryColor2: #7fa581;
+}
+
+
+.app {
+  --primaryColor: #ddd;
+  --appBgColor: rgb(10, 10, 10);
+  --navbarBgColor: #111;
+  --galleryContentColor: #111;
+  /* --galleryBtnBg: #222; */
+  --galleryBtnBg: rgb(30, 30, 30);
+  --logoBgMobile: rgba(0, 0, 0, 0.7);
+
+  --textFont: "Kanit", sans-serif;
+  --titleFont: 'Genos', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--appBgColor);
+  color: var(--primaryColor);
+  font-family: var(--textFont);
+  position: relative;
+}
+
+.app2 {
+  --primaryColor: #222;
+  --appBgColor: #eee;
+  --navbarBgColor: #fff;
+  --galleryContentColor: #ccc;
+  --galleryBtnBg: #fff;
+  --logoBgMobile: rgba(255, 255, 255, 0.8);
+
+  --textFont: "Kanit", sans-serif;
+  --titleFont: 'Genos', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--appBgColor);
+  color: var(--primaryColor);
+  font-family: var(--textFont);
+  position: relative;
+}
+
+.modeLightDark {
+  position: fixed;
+  top: 15%;
+  right: 0.5%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 40px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  background: #222;
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .modeLightDark {
+    top: 15%;
+  }
+}
+
+.lightMode {
+  color: #222;
+  background: #fff;
+  border-color: #222;
+}
+
+.modeLightIcon {
+  animation: lightMode 1s infinite alternate;
+  font-size: 2rem;
+
+}
+
+@keyframes lightMode {
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.modeDarkIcon {
+  animation: darkMode 1s infinite alternate;
+  font-size: 2rem;
+}
+
+@keyframes darkMode {
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+.mainPage {
+  width: 90vw;
+  max-width: 1360px;
+  min-height: 100vh;
+  margin: 0vh auto;
+  padding-top: 10vh;
+  position: relative;
+}
+
+@media screen and (max-width:800px) {
+  .mainPage {
+    width: 100vw;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 5vh; */
+}
+
+.title h2 {
+  font-family: 'Genos', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10vh;
+}
+
+/* @media screen and (max-width:800px) {
+  .title h2 {}
+} */
+
+.subtitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0vh auto 3vh;
+  color: var(--secondaryColor2);
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-family: var(--titleFont);
+}
+
+.icon {
+  color: var(--secondaryColor2);
+  margin-right: 10px;
+  margin-top: 2px;
+  font-size: 1.5rem;
+}
+
+.details::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.details::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.details::-webkit-scrollbar-thumb {
+  background: var(--secondaryColor2);
+
+}
+
+/* Handle on hover */
+.details::-webkit-scrollbar-thumb:hover {
+  background: var(--secondaryColor);
+}
+
+.cookieLink {
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--secondaryColor);
+}
